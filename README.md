@@ -1,10 +1,10 @@
 # BatchMates CV × JD Tailor
 
-**A free Claude skill that tailors your CV to a specific job description.** You get an ATS-checked, one-page PDF in your CV's own format, and nothing in it is made up.
+**A free, open AI skill that tailors your CV to a specific job description.** It works in **Claude, ChatGPT, Gemini, Codex, Grok, Groq** and any other chatbot. You get an ATS-checked, one-page PDF in your CV's own format, and nothing in it is made up.
 
 Built by **[Tanmay Narnaware](https://tanmayportfolio.me)** for **[BatchMates](https://batchmates.tech)**, a resource ecosystem for MBA and university students.
 
-![Claude Skill](https://img.shields.io/badge/Claude-Skill-d97757) ![License: MIT](https://img.shields.io/badge/License-MIT-blue) ![Input](https://img.shields.io/badge/Input-PDF%20%7C%20DOCX-555) ![Output](https://img.shields.io/badge/Output-1--page%20PDF-555)
+![Agent Skill](https://img.shields.io/badge/Agent-Skill-d97757) ![Works with](https://img.shields.io/badge/Works%20with-Claude%20%7C%20ChatGPT%20%7C%20Gemini%20%7C%20Codex%20%7C%20Grok%20%7C%20Groq-2ea44f) ![License: MIT](https://img.shields.io/badge/License-MIT-blue) ![Input](https://img.shields.io/badge/Input-PDF%20%7C%20DOCX-555) ![Output](https://img.shields.io/badge/Output-1--page%20PDF-555)
 
 ---
 
@@ -30,26 +30,22 @@ This skill closes that gap honestly. It **mirrors the JD's wording where your ex
 
 ## Install
 
-**Claude Code (plugin, one command)**
-```
-/plugin install cv-jd-tailor --marketplace tanmay7264/Batchmates-cv-jd-tailor
-```
-On older versions of Claude Code, use two steps:
-```
-/plugin marketplace add tanmay7264/Batchmates-cv-jd-tailor
-/plugin install cv-jd-tailor@batchmates
-```
+| Platform | How | Time |
+|---|---|---|
+| **Claude Code** | `/plugin install cv-jd-tailor --marketplace tanmay7264/Batchmates-cv-jd-tailor` | 10 sec |
+| **Claude** (app) | Settings → Capabilities → Skills → Upload [`cv-jd-tailor.zip`](cv-jd-tailor.zip) | 1 min |
+| **ChatGPT** Business/Enterprise/Edu | Plugins → Skills → Create → Upload the zip | 1 min |
+| **ChatGPT** Free/Plus/Pro | Custom GPT or Project, with [`PROMPT.md`](PROMPT.md) as its instructions | 3 min |
+| **OpenAI Codex** | Copy `skills/cv-jd-tailor` to `~/.agents/skills/` | 1 min |
+| **Gemini** (app) | Gems → New Gem, with [`PROMPT.md`](PROMPT.md) as its instructions | 2 min |
+| **Gemini CLI** | `gemini skills install https://github.com/tanmay7264/Batchmates-cv-jd-tailor.git --path skills/cv-jd-tailor` | 10 sec |
+| **Grok** (xAI) | Project, with [`PROMPT.md`](PROMPT.md) as its instructions | 2 min |
+| **Groq** | Playground, with [`PROMPT.md`](PROMPT.md) as the system prompt | 1 min |
+| **Anything else** | Paste [`PROMPT.md`](PROMPT.md) as the first message | 30 sec |
 
-**Claude app (web, desktop or mobile)**
-1. Download **[`cv-jd-tailor.zip`](cv-jd-tailor.zip)**.
-2. In Claude, open **Settings → Capabilities** and turn on code execution.
-3. Under **Skills**, choose **Upload skill** and select the zip.
+👉 **Step-by-step instructions for every platform: [INSTALL.md](INSTALL.md)**
 
-**Manual (Claude Code skill only)**
-```bash
-git clone https://github.com/tanmay7264/Batchmates-cv-jd-tailor
-cp -r Batchmates-cv-jd-tailor/skills/cv-jd-tailor ~/.claude/skills/
-```
+The **skill** version includes scripts that *measure* the ATS score and page fit. The **prompt** version runs the same workflow and rules on any chatbot, but the AI *estimates* those numbers.
 
 ## Use
 📘 **Full step-by-step guide: [GUIDE.md](GUIDE.md).** It covers installation, preparing your inputs, choosing bullets, reading your scores, interview prep, copy-paste prompts, troubleshooting and the FAQ.
@@ -57,7 +53,7 @@ cp -r Batchmates-cv-jd-tailor/skills/cv-jd-tailor ~/.claude/skills/
 **Quick start:** start a chat and say:
 > Tailor my CV to this JD
 
-Then attach your CV and paste the job description, or link to it. Pick your bullets from the options Claude gives you, and you'll get the PDF back.
+Then attach your CV and paste the job description, or link to it. Pick your bullets from the options the AI gives you, and you'll get the PDF back.
 
 **Tips**
 - Upload the **DOCX** if you have it. It keeps your formatting most faithfully.
@@ -79,10 +75,12 @@ skills/cv-jd-tailor/
 └── scripts/
     ├── extract_cv.py         CV text as an ATS reads it, format report, ATS warnings
     └── ats_check.py          ATS score, honest ceiling, page/email checks, short-line detection
-cv-jd-tailor.zip              ready-to-upload skill for the Claude app
+cv-jd-tailor.zip              ready-to-upload skill (Claude, ChatGPT Skills)
+PROMPT.md                     portable prompt for any chatbot (<8,000 characters)
+INSTALL.md                    install steps for every platform
 GUIDE.md                      detailed user guide
 ```
-The scripts need Python 3 and `pdfplumber`. Claude installs it automatically if it's missing.
+The scripts need Python 3 and `pdfplumber`. The AI installs it automatically if it's missing.
 
 ## Limitations
 - Rebuilding a complex two-column **PDF-only** CV from scratch is the weakest step. Upload a DOCX for the best fidelity.

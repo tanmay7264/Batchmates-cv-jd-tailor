@@ -25,6 +25,8 @@ A step-by-step guide, from installing the skill to an interview-ready CV. Built 
 
 ## 2. Install the skill
 
+> Using ChatGPT, Gemini, Codex, Grok, Groq or another assistant? See **[INSTALL.md](INSTALL.md)** for every platform. The steps below are for Claude.
+
 ### Option A: Claude app (web, desktop or mobile)
 1. Download **[`cv-jd-tailor.zip`](cv-jd-tailor.zip)** from this repo. Click the file, then the download button. Don't unzip it.
 2. Open Claude and go to **Settings → Capabilities**.
