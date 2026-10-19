@@ -1,0 +1,15 @@
+{
+  "name": "batchmates",
+  "description": "Career tools for MBA and university students, by BatchMates (batchmates.tech)",
+  "owner": {
+    "name": "Tanmay Narnaware",
+    "url": "https://tanmayportfolio.me"
+  },
+  "plugins": [
+    {
+      "name": "cv-jd-tailor",
+      "source": "./",
+      "description": "Tailor any CV to a job description: truthful XYZ bullets, same format, ATS 90+ check, one-page PDF."
+    }
+  ]
+}

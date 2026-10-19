@@ -1,0 +1,16 @@
+{
+  "name": "cv-jd-tailor",
+  "displayName": "CV × JD Tailor (BatchMates)",
+  "version": "1.0.0",
+  "description": "Tailor any CV to a job description: recruiter match score, missing keywords, truthful XYZ bullet options to approve, then a one-page ATS-checked PDF in the CV's own format. Never invents facts.",
+  "author": {
+    "name": "Tanmay Narnaware",
+    "url": "https://tanmayportfolio.me"
+  },
+  "homepage": "https://github.com/tanmay7264/Batchmates-cv-jd-tailor/blob/main/GUIDE.md",
+  "repository": "https://github.com/tanmay7264/Batchmates-cv-jd-tailor",
+  "license": "MIT",
+  "keywords": ["cv", "resume", "ats", "job-search", "career", "job-description", "interview-prep", "cover-letter", "batchmates"],
+  "documentationUrl": "https://github.com/tanmay7264/Batchmates-cv-jd-tailor/blob/main/GUIDE.md",
+  "supportUrl": "https://github.com/tanmay7264/Batchmates-cv-jd-tailor/issues"
+}

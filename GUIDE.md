@@ -34,14 +34,14 @@ A step-by-step guide, from installing the skill to an interview-ready CV. Built 
 
 > On a Team or Enterprise plan, an admin may need to allow skill uploads first.
 
-### Option B: Claude Code
-```bash
-git clone https://github.com/tanmay7264/Batchmates-cv-jd-tailor
-mkdir -p ~/.claude/skills
-cp -r Batchmates-cv-jd-tailor/cv-jd-tailor ~/.claude/skills/
-pip install pdfplumber            # used by the helper scripts
+### Option B: Claude Code (plugin)
+In a Claude Code session, run:
 ```
-For PDF-only CVs you'll also want Playwright with Chromium. For DOCX CVs, LibreOffice (`soffice`) handles the conversion.
+/plugin install cv-jd-tailor --marketplace tanmay7264/Batchmates-cv-jd-tailor
+```
+On older versions of Claude Code, run `/plugin marketplace add tanmay7264/Batchmates-cv-jd-tailor`, then `/plugin install cv-jd-tailor@batchmates`. To get updates, run `/plugin marketplace update batchmates`.
+
+The helper scripts need `pdfplumber` (`pip install pdfplumber`). For PDF-only CVs you'll also want Playwright with Chromium. For DOCX CVs, LibreOffice (`soffice`) handles the conversion.
 
 ### Check it worked
 In a new chat, ask: *"What skills do you have for CVs?"* Claude should mention **cv-jd-tailor**.

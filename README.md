@@ -29,15 +29,26 @@ This skill closes that gap honestly. It **mirrors the JD's wording where your ex
 - **Real gaps are never added.** You get an honest interview bridge instead. If gaps cap your ATS score, the skill reports the ceiling rather than gaming it.
 
 ## Install
-**Claude (web, desktop or mobile)**
+
+**Claude Code (plugin, one command)**
+```
+/plugin install cv-jd-tailor --marketplace tanmay7264/Batchmates-cv-jd-tailor
+```
+On older versions of Claude Code, use two steps:
+```
+/plugin marketplace add tanmay7264/Batchmates-cv-jd-tailor
+/plugin install cv-jd-tailor@batchmates
+```
+
+**Claude app (web, desktop or mobile)**
 1. Download **[`cv-jd-tailor.zip`](cv-jd-tailor.zip)**.
 2. In Claude, open **Settings → Capabilities** and turn on code execution.
 3. Under **Skills**, choose **Upload skill** and select the zip.
 
-**Claude Code**
+**Manual (Claude Code skill only)**
 ```bash
 git clone https://github.com/tanmay7264/Batchmates-cv-jd-tailor
-cp -r Batchmates-cv-jd-tailor/cv-jd-tailor ~/.claude/skills/
+cp -r Batchmates-cv-jd-tailor/skills/cv-jd-tailor ~/.claude/skills/
 ```
 
 ## Use
@@ -60,13 +71,16 @@ The keyword map holds 20–30 terms taken verbatim from the JD, weighted 3/2/1, 
 
 ## Repository contents
 ```
-GUIDE.md                      detailed user guide
-cv-jd-tailor.zip              ready-to-upload skill
-cv-jd-tailor/
+.claude-plugin/
+├── plugin.json               plugin manifest
+└── marketplace.json          "batchmates" marketplace (one-command install)
+skills/cv-jd-tailor/
 ├── SKILL.md                  workflow, rules, XYZ guidance, verification loop
 └── scripts/
     ├── extract_cv.py         CV text as an ATS reads it, format report, ATS warnings
     └── ats_check.py          ATS score, honest ceiling, page/email checks, short-line detection
+cv-jd-tailor.zip              ready-to-upload skill for the Claude app
+GUIDE.md                      detailed user guide
 ```
 The scripts need Python 3 and `pdfplumber`. Claude installs it automatically if it's missing.
 
