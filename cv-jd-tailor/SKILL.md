@@ -5,6 +5,8 @@ description: Tailor anyone's CV to a job description. They upload their CV (PDF 
 
 # CV × JD Tailor
 
+*Built by Tanmay Narnaware for BatchMates (batchmates.tech) · github.com/tanmay7264/Batchmates-cv-jd-tailor · MIT licence*
+
 The user uploads **their CV** (PDF or DOCX) and gives **a job description** (text, file or link). They get back the strongest *truthful* version of their CV for that role: **same format**, ATS score 90+ where their real experience allows, exactly one page (or their original page count), as a PDF they can upload.
 
 Flow: **Intake → Plan (they choose) → Build → Verify loop → Deliver**, then optional interview prep and cover letter.
