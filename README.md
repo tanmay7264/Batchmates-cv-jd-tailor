@@ -41,7 +41,9 @@ cp -r Batchmates-cv-jd-tailor/cv-jd-tailor ~/.claude/skills/
 ```
 
 ## Use
-Start a chat and say:
+📘 **Full step-by-step guide: [GUIDE.md](GUIDE.md).** It covers installation, preparing your inputs, choosing bullets, reading your scores, interview prep, copy-paste prompts, troubleshooting and the FAQ.
+
+**Quick start:** start a chat and say:
 > Tailor my CV to this JD
 
 Then attach your CV and paste the job description, or link to it. Pick your bullets from the options Claude gives you, and you'll get the PDF back.
@@ -58,6 +60,7 @@ The keyword map holds 20–30 terms taken verbatim from the JD, weighted 3/2/1, 
 
 ## Repository contents
 ```
+GUIDE.md                      detailed user guide
 cv-jd-tailor.zip              ready-to-upload skill
 cv-jd-tailor/
 ├── SKILL.md                  workflow, rules, XYZ guidance, verification loop
